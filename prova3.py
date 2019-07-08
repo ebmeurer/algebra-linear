@@ -1,4 +1,5 @@
 import math
+from math import sqrt
 
 num_elementos = 0
 num_vetores = 0
