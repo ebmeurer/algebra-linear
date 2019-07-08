@@ -1,9 +1,11 @@
 import prova1
+import prova2
 import prova3
 
 funcoes = []
 
 funcoes += prova1.getFuncoes()
+funcoes += prova2.getFuncoes()
 funcoes += prova3.getFuncoes()
 
 print("Escolha o metodo a ser calculado")
