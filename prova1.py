@@ -1,4 +1,5 @@
 import math
+from math import sqrt
 import numpy as np 
 from numpy import linalg as lin
 
