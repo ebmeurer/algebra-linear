@@ -10,7 +10,7 @@ def get_produto_interno():
     for i in range(2):
         A.append([])
         for j in range(num_elementos):
-            A[i].append(float(input("Digite o elemento "+str(j+1)+" do Vetor A"+str(i+1)+"(em decimal): ")))
+            A[i].append(float(eval(input("Digite o elemento "+str(j+1)+" do Vetor A"+str(i+1)+": "))))
         print("\n")
     return produto_interno(A[0],A[1])
 
@@ -19,7 +19,7 @@ def get_norma_de_A():
     num_elementos = int(input("Quantos elementos existem no vetor A? "))
     A = []
     for j in range(num_elementos):
-        A.append(float(input("Digite o elemento "+str(j+1)+" do Vetor A(em decimal): ")))
+        A.append(float(eval(input("Digite o elemento "+str(j+1)+" do Vetor A: "))))
     print("\n")
     return norma_de_A(A)
 
@@ -53,7 +53,6 @@ def calcular_Cx(a,b):
         C.append(Baux)
         Baux = 0
     print("C"+str(len_b+1)+"= "+str(C))
-    print("\n")
     return C
         
 def gram_schimidt():
@@ -67,13 +66,13 @@ def gram_schimidt():
     for i in range(num_vetores):
         A.append([])
         for j in range(num_elementos):
-            A[i].append(float(input("Digite o elemento "+str(j+1)+" do Vetor A"+str(i+1)+"(em decimal): ")))
+            A[i].append(float(eval(input("Digite o elemento "+str(j+1)+" do Vetor A"+str(i+1)+": "))))
         print("\n")
     B_output = []
     B_output.append(calcular_Bx(A[0]))
     for i in range(1,num_vetores):
         B_output.append(calcular_Bx(calcular_Cx(A,B_output)))
-    print("\n\n")
+    print("\n")
     retorno = "B = {\n"
     for i in range(len(B_output)):
         retorno += "B"+str(i+1)+"= "+str(B_output[i])+",\n"
@@ -87,7 +86,7 @@ def calcula_angulo():
     for i in range(2):
         A.append([])
         for j in range(num_elementos):
-            A[i].append(float(input("Digite o elemento "+str(j+1)+" do Vetor A"+str(i+1)+"(em decimal): ")))
+            A[i].append(float(eval(input("Digite o elemento "+str(j+1)+" do Vetor A"+str(i+1)+": "))))
         print("\n")
     cos = (produto_interno(A[0],A[1]))/(norma_de_A(A[0])*norma_de_A(A[1]))
     angulo = math.acos(cos)
